@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import camelModboard from "../assets/camelModboard.jpeg";
 import modeboard2 from "../assets/modeboard2.png";
 import camelModBoard2 from "../assets/camelModBoard2.png";
+import camelModBoard3 from "../assets/camelModBoard3.png";
+
 import patrron from "../assets/patrron.png";
 
 import Image from "next/image";
@@ -29,6 +31,12 @@ const collections = [
   },
   {
     id: 4,
+    title: "collection 3",
+    imageUrl: camelModBoard3,
+    description: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
+  },
+  {
+    id: 5,
     title: "Patrron",
     imageUrl: patrron,
     description: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
