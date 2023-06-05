@@ -26,6 +26,10 @@ body {
   font-family: "Cairo" !important;
 
   color: rgb(var(--foreground-rgb));
+  background-image: url('../assets/pyramids.jpeg') ;
+  background-repeat: no-repeat;
+  background-size: 10%;
+  background-position: bottom left;
 
 }
 .collection-card {

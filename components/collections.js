@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import camelModboard from "../assets/camelModboard.jpeg";
-import modeboard2 from "../assets/modeboard2.svg";
+import modeboard2 from "../assets/modeboard2.png";
 import Image from "next/image";
 import { Modal } from "react-bootstrap";
 
