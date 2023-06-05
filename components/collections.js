@@ -1,46 +1,38 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import photo1 from "../assets/photo1.jpeg";
-import photo2 from "../assets/photo2.jpeg";
+import { motion, AnimatePresence } from "framer-motion";
+import camelModboard from "../assets/camelModboard.jpeg";
+import modeboard2 from "../assets/modeboard2.svg";
 import Image from "next/image";
-
 import { Modal } from "react-bootstrap";
 
 const collections = [
   {
     id: 1,
-    title: "Collection 1",
-    imageUrl: photo1,
+    title: "Dreamy desert",
+    imageUrl: camelModboard,
+    description: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
   },
   {
     id: 2,
     title: "Collection 2",
-    imageUrl: photo2,
-  },
-  {
-    id: 3,
-    title: "Collection 3",
-    imageUrl: photo1,
-  },
-
-  {
-    id: 4,
-    title: "Collection 4",
-    imageUrl: photo1,
-  },
-  {
-    id: 5,
-    title: "Collection 5",
-    imageUrl: photo2,
-  },
-  {
-    id: 6,
-    title: "Collection 6",
-    imageUrl: photo1,
+    imageUrl: modeboard2,
+    description: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
   },
 ];
 
 const listVariants = {
+  open: {
+    height: "auto",
+    transition: {
+      duration: 0.3,
+    },
+  },
+  collapsed: {
+    height: 0,
+    transition: {
+      duration: 0.3,
+    },
+  },
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -77,22 +69,37 @@ const Collections = () => {
         <Modal show={showModal} onHide={handleCloseModal} centered>
           <Modal.Body>
             <Image
-              src={selectedImage}
+              src={selectedImage.image}
               width={600}
               alt="Full-size"
               className="img-fluid"
             />
+            <div className="w-full">
+              <label className="text-[#C19A6B] text-2xl flex flex-1 justify-center p-4">
+                {selectedImage.title}
+              </label>
+
+              <p className="text-black">{selectedImage.description}</p>
+            </div>
           </Modal.Body>
+
           <Modal.Footer>
-            <button className="btn btn-secondary" onClick={handleCloseModal}>
+            <button
+              className="btn bg-[#C19A6B] text-white"
+              onClick={handleCloseModal}
+            >
               Close
             </button>
           </Modal.Footer>
         </Modal>
       </div>
-      ```
+      <label className="text-3xl py-2 text-[#C19A6B]">
+        {" "}
+        Dreamy desert by razan{" "}
+      </label>
+      <div className="h-[1px] w-full bg-[#C19A6B] mb-4" />
       <motion.div
-        className="row"
+        className="row "
         variants={listVariants}
         initial="hidden"
         animate="visible"
@@ -100,22 +107,30 @@ const Collections = () => {
         {collections.map((collection) => (
           <motion.div
             key={collection.id}
-            className="col-md-4 mb-4"
+            className="col-md-4 mb-4 "
             variants={itemVariants}
           >
             <div
-              className="card h-100"
-              style={{ boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}
-              onClick={() => handleShowModal(collection.imageUrl)}
+              className="card h-100 collection-card hover:translate-y-2"
+              onClick={() =>
+                handleShowModal({
+                  image: collection.imageUrl,
+                  title: collection.title,
+                  description: collection?.description,
+                })
+              }
             >
               <Image
                 src={collection.imageUrl}
                 alt={collection.title}
                 className="card-img-top"
                 width={300}
+                height={300}
               />
               <div className="card-body">
-                <h5 className="card-title">{collection.title}</h5>
+                <h5 className="card-title text-[#C19A6B] ">
+                  {collection.title}
+                </h5>
               </div>
             </div>
           </motion.div>

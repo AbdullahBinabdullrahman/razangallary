@@ -10,13 +10,13 @@ const Header = () => {
   return (
     <motion.header
       className="text-center py-5"
-      style={{ backgroundColor: "purple" }}
+      style={{ backgroundColor: "#FAD5A5" }}
       variants={headerVariants}
       initial="hidden"
       animate="visible"
     >
-      <h1 className="text-white display-4">{`Razan's Collections`}</h1>
-      <p className="text-white-50 lead">Breathtaking Collections for You</p>
+      <h1 className="text-white display-4">{`مجموعة رزان `}</h1>
+      <p className="text-white-100 lead mt-1 ">مجموعة تحبس الانفاس</p>
     </motion.header>
   );
 };

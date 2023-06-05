@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <footer
       className="text-center py-3 mt-5"
-      style={{ backgroundColor: "purple" }}
+      style={{ backgroundColor: "#FAD5A5" }}
     >
-      <p className="text-white-50 mb-0">{`© Razan's Collections 2023`}</p>
+      <p className="text-white mb-0">&hearts;{` Razan's Collections 2023 `}</p>
     </footer>
   );
 };
