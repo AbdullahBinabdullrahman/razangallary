@@ -16,7 +16,9 @@ const Header = () => {
       animate="visible"
     >
       <h1 className="text-white display-4">{`مجموعة رزان `}</h1>
-      <p className="text-white-100 lead mt-1 ">مجموعة تحبس الانفاس</p>
+      <p className="text-white-100 lead mt-1 text-white ">
+        مجموعة تحبس الانفاس
+      </p>
     </motion.header>
   );
 };

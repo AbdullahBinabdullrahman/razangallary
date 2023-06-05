@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import camelModboard from "../assets/camelModboard.jpeg";
-import modeboard2 from "../assets/modeboard2.png";
-import camelModBoard2 from "../assets/camelModBoard2.png";
-import camelModBoard3 from "../assets/camelModboard3.png";
+import design1 from "../assets/design1.png";
+import design2 from "../assets/design2.png";
+import design3 from "../assets/design3.png";
+import design4 from "../assets/design4.png";
 
 import patrron from "../assets/patrron.png";
 
@@ -13,33 +14,40 @@ import { Modal } from "react-bootstrap";
 const collections = [
   {
     id: 1,
-    title: "collection 1",
+    title: "ModBoard",
     imageUrl: camelModboard,
-    description: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
+    description: `هو عن طبيعة الصحراء الحالمة وسكانها من جبال وصخور وتراب و حيوانات وكثبان رملية ومن مناخها الحار في النهار والبارد في الليل … تم توظيف المجموعه بكاملها من خلال المودبورد وايضا هذه المجموعة تناسب المرأة من سن ٢٠-٣٠ لان المجموعة تحتوي على لمسة عصرية وايضا كلاسيكية في نفس الوقت 
+    `,
   },
   {
     id: 2,
-    title: "Collection 2",
-    imageUrl: modeboard2,
-    description: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
+    title: "التصميم رقم -1-",
+    imageUrl: design1,
+    description: `هو تصميم مستوحى من الطبيعة الحالمة في الصحراء وايضا من الوان الحيوانات والصخور وايضا الاتربه في الصحراء عبارة عن جاكيت شامواه بحزام مفتوح من الخلف ومخيط بواسطة حبال شامواه مع تنورة قصيرة بنفس اللون ونفس الخامة `,
   },
   {
     id: 3,
-    title: "collection 3",
-    imageUrl: camelModBoard2,
-    description: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
+    title: "التصميم رقم -2-",
+    imageUrl: design2,
+    description: `عبارة عن تصميم مستوحى من الطبيعة الخلابة والمناخ الصحراوي ويمثل البرد الذي في الليل من خلال قماش الشامواه والحر الذي في النهار من خلال قماش الكتان `,
   },
   {
     id: 4,
-    title: "collection 3",
-    imageUrl: camelModBoard3,
-    description: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
+    title: "التصميم رقم -3-",
+    imageUrl: design3,
+    description: `هو عبارة عن تصميم مستوحى من انحناءات وتموجات الطبيعة في الصحراء وهو جاكيت بلا اكمام من جلد الجمل او شعر الجمل المدعم بالعظام لكي يعطي التقويسه المناسبة وبالنسبة للاكسسوارات هي عبارة عن شنطة وحلق من قوتشي واخيرا شال مصنوع من الكتان الطبيعي `,
   },
   {
     id: 5,
+    title: "التصميم رقم -4-",
+    imageUrl: design4,
+    description: `عبارة عن تصميم مستوحى من الاتربه في الصحراء والكثبان الرملية بمنحنياتها المتنوعة واختلاف درجات الوانها وايضا بانسيابيتها وهو عبارة عن جاكيت باكمام فقط ذو سحاب خلفي واهداب من الطرفين`,
+  },
+  {
+    id: 6,
     title: "Patrron",
     imageUrl: patrron,
-    description: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
+    description: `هو عبارة عن انحناءات مستوحاة من الطبيعة الخلابة في الصحراء من شتى انواعها سواء من الاتربه او الجبال او الكثبان الرملية او الصخور وماالى ذلك وتم توظيف هذه الانحناءات بمختلف مقاسات السمك لتعطي تأثير وانطباع جميل`,
   },
 ];
 
