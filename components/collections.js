@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import camelModboard from "../assets/camelModboard.jpeg";
 import modeboard2 from "../assets/modeboard2.png";
 import camelModBoard2 from "../assets/camelModBoard2.png";
-import camelModBoard3 from "../assets/camelModBoard3.png";
+import camelModBoard3 from "../assets/camelModboard3.png";
 
 import patrron from "../assets/patrron.png";
 
